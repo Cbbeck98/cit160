@@ -3,7 +3,7 @@
 #box {
 	box-sizing: border-box;
 }
-body {
+#body {
 	font-family: 'Lato', Arial, sans-serif;
 	height: 100vh;
 	display: flex;
