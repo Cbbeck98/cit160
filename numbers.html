@@ -70,13 +70,13 @@
 
             // PROCESSING
             
-            t1 = (q1 * p1) + (q2 * p2) + (q3 * p3);
-            t2 = t1 - (t1 * discount);
-            t3 = ((t2 * tax) + t2).toFixed(2);
+            gross = (q1 * p1) + (q2 * p2) + (q3 * p3);
+            dis = gross - (gross * discount);
+            final = ((dis * tax) + dis).toFixed(2);
 
             //OUTPUT
 
-            document.querySelector('#output').innerHTML = `$${t3}`;
+            document.querySelector('#output').innerHTML = `$${final}`;
 
         }
     </script>
