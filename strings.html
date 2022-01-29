@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/strings.css">
-    <script src="js/strings.js">
+    <script>
+        function myFunction() {
 
+            let first = document.getElementById('firstname').value;
+            let fruit = document.getElementById('fruit').value;
+            let aml1 = document.getElementById('animal1').value;
+            let aml2 = document.getElementById('animal2').value;
+
+            let outputString = `"And it came to pass that the people of ${first} did till the land, and raise all manner of ${fruit}, and flocks of herds, and flocks of all manner of ${aml1} of every kind, and ${aml2}."`
+
+            document.querySelector('#output').innerHTML = outputString;
+        }
     </script>
 </head>
+
 <body>
     <header>
         <h1>Scripture Story Build</h1>
-        <h2>Student Name</h2>
+        <h2>Cooper Beck</h2>
     </header>
     <main>
         <h3>Inputs</h3>
@@ -21,13 +33,14 @@
         <label class="heading">Name a fruit: <input type="text" id="fruit" placeholder="apple"></label>
         <label class="heading">Name an animal: <input type="text" id="animal1" placeholder="horse"></label>
         <label class="heading">Name another animal: <input type="text" id="animal2" placeholder="lamb"></label>
-    
-        <div class="process"><button onclick="___()">Build Story</button>
+
+        <div class="process"><button onclick="myFunction()">Build Story</button>
         </div>
         <p id="output"></p>
     </main>
     <footer>
-        &copy;<span id="copyright"></span> &bull; Student Name &bull; BYU-Idaho &bull; CIT 160
+        &copy;<span id="copyright"></span> &bull; Cooper Beck &bull; BYU-Idaho &bull; CIT 160
     </footer>
 </body>
+
 </html>
