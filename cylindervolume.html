@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcvolume() {
+            // Input - Get the radius and height from the user r h
+            let r = document.querySelector('#r').value;
+            let h = document.querySelector('#h').value;
+            r = parseFloat(r);
+            h = parseFloat(h);
+
+            // Processing - Calculate the volume of the cylinder using V = pi * r^2 h
+            let v = Math.PI * Math.pow(r, 2) * h
+
+            // Output - Display output v
+            document.querySelector('#output').textContent = `The Volume is ${v.toFixed(0)} units`;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Volume of a Cylinder</h1>
+    <lable for="r">Enter the cylinder RADIUS: </lable>
+    <input type="text" id="r" />
+    <lable for="h">Enter HEIGHT of the cylinder: </lable>
+    <input type="text" id="h" />
+    <button onclick="calcvolume()">Calculate Volume</button>
+    <p id="output"></p>
+</body>
+
+</html>
