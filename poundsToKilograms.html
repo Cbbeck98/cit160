@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function poundstokilograms() {
+            // Input - Get the number of Pounds from the user  p
+            let p = document.querySelector('#p').value;
+            p = parseFloat(p);
+
+            // Processing - Convert the number of Pounds into Kilograms using k = p * 0.453592
+            let k = p * 0.453592
+
+            // Output - Display output k
+            document.querySelector('#output').textContent = `${k.toFixed(1)} Kilograms`;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Pounds to Kilograms</h1>
+    <lable for="p">Enter the Number of Pounds: </lable>
+    <input type="text" id="p" />
+    <button onclick="poundstokilograms()">Get Kilograms</button>
+    <p id="output"></p>
+</body>
+
+</html>
