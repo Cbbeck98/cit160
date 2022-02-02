@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function aftertaxpay() {
+            // Input - Get the total regular and overtime hours worked for the period
+            let r = document.querySelector('#r').value;
+            let o = document.querySelector('#o').value;
+            let t = .15
+            r = parseFloat(r);
+            o = parseFloat(o);
+            
+
+            // Processing - Find after tax pay by-- regular pay (15 * r) + overtime pay (22.50 * o) - t ((15 * r) + (22.50 * o))
+            let g = t * ((15 * r) + (22.50 * o))
+            let a = (15 * r) + (22.50 * o) - g
+
+
+            // Output - Display output a
+            document.querySelector('#output').textContent = `$${a.toFixed(2)} Dollars`;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Pay After Taxes</h1>
+    <lable for="r">Enter the Amount of Regular Hours Worked: </lable>
+    <input type="text" id="r" />
+    <lable for="o">Enter the Amount of Overtime Hours Worked: </lable>
+    <input type="text" id="o">
+    <button onclick="aftertaxpay()">Calculate After Tax Pay</button>
+    <p id="output"></p>
+</body>
+
+</html>
