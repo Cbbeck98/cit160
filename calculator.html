@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
 </head>
+
 <body>
-    
+    <h1>Calculator</h1>
+    <span id="num1"></span>
+    <select name="operand">
+        <option value="" selected disabled>Select An Operand--</option>\
+        <option value="+">+ Addition</option>
+        <option value="-">- Subtraction</option>
+
+    </select><span id="num2"></span> =
+    <input type="text" id="answer"><br>
+    <hr>
+    <button onclick="checkMath">Check</button>
+    <hr>
+    <p id="message"></p>
+
+    <script>
+        const max = 11;
+        document.querySelector('#num1').textContent = `${Math.floor(Math.random() * MAX)} `;
+        document.querySelector('#num2').textContent = `${Math.floor(Math.random() * MAX)} `;
+
+        function checkMath() {
+            // input - get operand and get answer
+
+            // processing - if + then set answer key to addition or set it to subtraction // compare the answer key to the input answer and build the appr. message
+
+            // OUTPUT - post message to user
+        }
+    </script>
+
 </body>
+
 </html>
