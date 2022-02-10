@@ -11,7 +11,7 @@
 <body>
   <h1>Calculator</h1>
   <span id="num1"></span>
-  <select name="operand">
+  <select id="operand">
     <option value="" selected disabled>Select An Operand--</option>\
     <option value="+">+ Addition</option>
     <option value="-">- Subtraction</option>
@@ -36,17 +36,17 @@
 
       // processing - if + then set answer key to addition or set it to subtraction // compare the answer key to the input answer and build the appr. message
 
-      let answerkey = 0
+      let answerKey = 0;
       let message = '';
 
       // determine answerKey
       if (operand === "+") {
-        answerkey = num1 + num2;
+        answerKey = num1 + num2;
       } else {
-        answerkey = num1 - num2;
+        answerKey = num1 - num2;
       }
       // derermine message
-      if (answerkey === userAnswer) {
+      if (answerKey === userAnswer) {
         message = `Correct! 🏆`;
       } else {
         message = `Incorrect 😢`;
