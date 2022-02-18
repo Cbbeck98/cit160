@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+</head>
+<main>
+    <label><button onclick="checkAlarm()">Start Alarm Clock</button></label>
+    <hr />
+    <p id="message"></p>
+</main>
+<footer>
+    &copy;2022 &bull; Cooper Beck &bull; BYU-Idaho &bull; CIT160
+</footer>
+<body>
+    <header>
+        <h1>Week 7: Alarm Clock</h1>
+        <h2>Cooper Beck</h2>
+    </header>
+<script>
+    function checkAlarm() {
+        // INITIALIZE
+        const now = new Date();
+        let message = "";
+
+        // INPUT
+        const theMOnth = now.getMonth();
+        const theDate = now.getDate();
+        const theDay = now.getDay();
+        //console.table(theMonth, theDate, theDay);
+
+        // PROCESSING
+        if (theDay === 5 || theDay === 6 || (theMonth === 0 && theDate === 1) || (theMonth === 3 && theDate === 4) || (theMonth === 11 && theDate === 25)) {
+            message = 'Sleep In!';
+        } else {
+            message = 'Get Up!';
+        }
+
+        // OUTPUT
+        document.querySelector('#message').textContent = message;
+    }
+</script>
+    
+</body>
+</html>
