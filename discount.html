@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount</title>
+</head>
+
+<body>
+    <header>
+        <h1>Week 7: Discount</h1>
+        <h2>Cooper Beck</h2>
+    </header>
+    <main>
+        <label><button onclick="runDiscount()">Run Calculation</button></label>
+        <input type="text" id="subtotal" />
+        <hr />
+        <p id="frank"></p>
+    </main>
+    <footer>
+        &copy;2022 &bull; Cooper Beck &bull; BYU-Idaho &bull; CIT160
+    </footer>
+
+    <script>
+        function runDiscount() {
+            // INITIALIZE
+            const now = new Date();
+            let frank = 0;
+            let subtotal = document.querySelector('#subtotal').value
+
+            // INPUT
+            const theDay = now.getDay();
+
+            // PROCESSING
+            if (theDay === 2 || theDay === 3 && (subtotal > 50)) {
+                frank = (subtotal - (subtotal * .1)) * 1.06;
+            } else {
+                frank = subtotal * 1.06;
+            }
+
+            // OUTPUT
+            document.querySelector('#frank').textContent = frank.toFixed(2);
+        }
+    </script>
+
+</body>
+
+</html>
