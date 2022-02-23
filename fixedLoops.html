@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Week 8: Fix Loop Structures</h1>
+        <h2>Cooper Beck</h2>
+    </header>
+    <main>
+        <label><button onclick="first()">Display 1</button></label>
+        <label><button onclick="second()">Display 2</button></label>
+        <label><button onclick="third()">Display 3</button></label>
+        <label><button onclick="fourth()">Display 4</button></label>
+        <hr />
+        <p id="display1"></p>
+        <p id="display2"></p>
+        <p id="display3"></p>
+        <p id="display4"></p>
+    </main>
+    <footer>
+        &copy;2022 &bull; Cooper Beck &bull; BYU-Idaho &bull; CIT160
+    </footer>
+
+    <script>
+
+
+        //The output in display1 should be: Part 1:0 Part 1:1
+        function first() {
+            let output1 = '';
+            let i = 0;
+            while (i < 2) {
+                output1 += `Part 1:${i}<br>`;
+            }
+            document.getElementById('display1').textContent = "Output#2-   " + output1;
+        }
+
+
+        //output should be Part 2:0,Part 2:1,Part 2:2
+        function second() {
+            var output2 = '';
+            for (let j = 0; j < 3; j++) {
+                if (j !== 2) {
+                    output2 += ` Part 2:${j},`;
+                }
+                else {
+                    output2 += ` Part 2:${j}`;
+                }
+            }
+            document.getElementById('display2').textContent = "Output#2-   " + output2;
+        }
+
+
+        //output should be 0 1 2 3 
+        function third() {
+            let output3 = '';
+            for (let k = 0; k < 4; k++) {
+                output3 += k + " ";
+            }
+            document.getElementById('display3').textContent = "Output#3-   " + output3;
+
+        }
+
+
+        //output should be 17449.41
+        function fourth() {
+            let balance = 1000;
+            const rate = .10;
+            let n = 30;
+            for (let s = 0; s < n; s++) {
+                interest = balance * rate;
+                balance += interest;
+            }
+            document.getElementById('display4').textContent = "Output#4-   " + balance.toFixed(1) + 1;
+
+        }
+
+    </script>
+</body>
+
+</html>
