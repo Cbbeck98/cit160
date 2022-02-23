@@ -24,11 +24,17 @@
 
     <script>
         function randomList() {
-
-
+            let list = '';
+            const MAX = 50;
+            let n = 1;
+            let z = Math.floor(Math.random() * MAX);
+            while (n <= z) {
+                list += `Item: ${n}<br>`;
+                n++;
+            }
+            document.getElementById('itemlist').innerHTML = list;
         }
-
-
+        { }
     </script>
 </body>
 
