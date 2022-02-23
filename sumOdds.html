@@ -21,7 +21,14 @@
             let sum = 0;
 
             // processing - compute sum
+            let i = 1;
+            while (i <= n) {
+                sum += i;
+                i = i + 2;
+            }
 
+            // output
+            document.querySelector('#sum').textContent = sum;
         }
     </Script>
 
