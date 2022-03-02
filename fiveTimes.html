@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times Table using Repetition</title>
+</head>
+
+<body>
+    <header>
+        <header>
+            <h1>Week 9: Times Table using Repetition</h1>
+            <h2>Cooper Beck</h2>
+        </header>
+        <main>
+            <label><button onclick="fiveTables()">Generate 12 Times Tables for 5</button></label>
+            <hr />
+            <p id="fivetimes"></p>
+        </main>
+    </header>
+    <footer>
+        &copy;2022 &bull; Cooper Beck &bull; BYU-Idaho &bull; CIT160
+    </footer>
+    <script>
+        function fiveTables() {
+            var output = '';
+            let i = 1;
+            while (i <= 12) {
+                output += `5 x ${i} = ` + (5 * i) + ` <br>`;
+                i++;
+            }
+            document.getElementById('fivetimes').innerHTML = output;
+        }
+    </script>
+</body>
+
+</html>
