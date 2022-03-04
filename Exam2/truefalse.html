@@ -32,11 +32,10 @@
             // Input
             let one = document.querySelector('#one').value;
             let two = document.querySelector('#two').value;
-
-            // Processing 
             let message = '';
 
-            if ((two + one) > 20) {
+            // Processing 
+            if ((one + two) > 20) {
                 message = 'True';
             } else if (one > 5 && two > 5) {
                 message = 'True';
@@ -45,7 +44,7 @@
             }
 
             // OUTPUT - post result message to user
-            document.querySelector('#message').textContent = message;
+            document.querySelector('#textField').textContent = message;
 
         }
     </script>
