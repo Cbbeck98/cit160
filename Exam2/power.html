@@ -25,9 +25,13 @@
     </footer>
     <script>
         function powerOf2() {
+            
+            // Input
             let output = 1;
             let i = 0;
             let list = " "
+
+            // Processing 
             while (i < 31) {
                 output = output * 2;
                 if (output == 2147483648) {
@@ -38,6 +42,8 @@
                 }
                 i++;
             }
+
+            // OUTPUT
             document.getElementById('powerOf2').textContent = list;
         }
     </script>

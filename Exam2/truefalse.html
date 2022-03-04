@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam 2 Question 2</title>
+</head>
+
+<body>
+    <header>
+        <header>
+            <h1>Exam 2 Question 2</h1>
+            <h2>Cooper Beck</h2>
+        </header>
+        <main>
+            <p>Please enter two numbers:</p>
+            <input type="text" id="one" size="5"><br>
+            <input type="text" id="two" size="5">
+            <button type="button" onclick="textField">Click</button>
+            <div id="textField"></div>
+            <hr />
+        </main>
+    </header>
+    <footer>
+        &copy;2022 &bull; Cooper Beck &bull; BYU-Idaho &bull; CIT160
+    </footer>
+    <script>
+        function textField() {
+            
+            // Input
+            let one = document.querySelector('#one').value;
+            let two = document.querySelector('#two').value;
+
+            // Processing 
+            let message = ''
+
+            if ((two + one) > 20) {
+                message = 'True';
+            } else if (one > 5 && two > 5) {
+                message = 'True'
+            } else {
+                message = 'False'
+            }
+
+            // OUTPUT - post result message to user
+            document.querySelector('#message').textContent = message;
+
+        }
+    </script>
+</body>
+
+</html>
