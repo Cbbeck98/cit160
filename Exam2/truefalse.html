@@ -18,7 +18,7 @@
             <p>Please enter two numbers:</p>
             <input type="text" id="one" size="5"><br>
             <input type="text" id="two" size="5">
-            <button type="button" onclick="textField">Click</button>
+            <button onclick="textField()">Check Inputs</button>
             <div id="textField"></div>
             <hr />
         </main>
@@ -28,20 +28,20 @@
     </footer>
     <script>
         function textField() {
-            
+
             // Input
             let one = document.querySelector('#one').value;
             let two = document.querySelector('#two').value;
 
             // Processing 
-            let message = ''
+            let message = '';
 
             if ((two + one) > 20) {
                 message = 'True';
             } else if (one > 5 && two > 5) {
-                message = 'True'
+                message = 'True';
             } else {
-                message = 'False'
+                message = 'False';
             }
 
             // OUTPUT - post result message to user
