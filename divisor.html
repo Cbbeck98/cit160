@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam 2 Question 3</title>
+</head>
+
+<body>
+    <header>
+        <header>
+            <h1>Exam 2 Question 3</h1>
+            <h2>Cooper Beck</h2>
+        </header>
+        <main>
+            <label for="start">Start: </label>
+            <input type="text" id="start">
+            <label for="end">End: </label>
+            <input type="text" id="end">
+            <label for="divisor">Divisor: </label>
+            <input type="text" id="divisor">
+            <label><button onclick="divisorS()">Generate Even Divisor</button></label>
+            <hr />
+            <p id="divisorS"></p>
+        </main>
+    </header>
+    <footer>
+        &copy;2022 &bull; Cooper Beck &bull; BYU-Idaho &bull; CIT160
+    </footer>
+    <script>
+
+        function divisorS() {
+            let num1 = document.querySelector("#start").value;
+            let num2 = document.querySelector("#end").value;
+            let num3 = document.querySelector("#divisor").value;
+            let output = "";
+            let i = num1
+
+            while (i < num2) {
+                output += i;
+                i += num3;
+            }
+            document.getElementById('divisorS').textContent = output;
+        }
+
+    </script>
+</body>
+
+</html>

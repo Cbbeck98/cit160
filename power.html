@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam 2 Question 1</title>
+</head>
+
+<body>
+    <header>
+        <header>
+            <h1>Exam 2 Question 1</h1>
+            <h2>Cooper Beck</h2>
+        </header>
+        <main>
+            <label><button onclick="powerOf2()">Generate Powers of 2</button></label>
+            <hr />
+            <p id="powerOf2"></p>
+        </main>
+    </header>
+    <footer>
+        &copy;2022 &bull; Cooper Beck &bull; BYU-Idaho &bull; CIT160
+    </footer>
+    <script>
+        function powerOf2() {
+            let output = 1;
+            let i = 0;
+            let list = " "
+            while (i < 31) {
+                output = output * 2;
+                if (output == 2147483648) {
+                    list += output
+                }
+                else {
+                    list += output + ', '
+                }
+                i++;
+            }
+            document.getElementById('powerOf2').textContent = list;
+        }
+    </script>
+</body>
+
+</html>
