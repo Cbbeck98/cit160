@@ -21,9 +21,9 @@
             <input type="text" id="end">
             <label for="divisor">Divisor: </label>
             <input type="text" id="divisor">
-            <label><button onclick="divisorS()">Generate Even Divisor</button></label>
+            <button onclick="divisorS()">Generate Even Divisor</button>
+            <div id="divisorS"></div>
             <hr />
-            <p id="divisorS"></p>
         </main>
     </header>
     <footer>
@@ -34,9 +34,9 @@
         function divisorS() {
 
             // Input
-            let num1 = document.querySelector("#start").value;
-            let num2 = document.querySelector("#end").value;
-            let num3 = document.querySelector("#divisor").value;
+            let num1 = document.querySelector('#start').value;
+            let num2 = document.querySelector('#end').value;
+            let num3 = document.querySelector('#divisor').value;
             let output = "";
             let i = num1;
 
@@ -47,7 +47,7 @@
             }
 
             // OUTPUT
-            document.querySelector('#divisorS').textContent = message;
+            document.querySelector('#divisorS').textContent = output;
         }
 
     </script>
