@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Chill</title>
+</head>
+
+<body>
+    <h1>Wind Chill</h1>
+    <label for="temperature">Temperature: <input type="text" id="temperature"></label>
+    <label for="windspeed">Wind Speed: <input type="text" id="windspeed"></label>
+    </label> <br><br>
+    <button onclick="doInputOutput()">Wind Chill</button>
+
+    <div id="calc"></div>
+
+    <script>
+        function doInputOutput() {
+            //declarations
+            let calc = 0;
+            let wchill = windChill();
+
+            //input
+            let temperature = parseFloat(document.querySelector('#temperature').value);
+            let windspeed = parseFloat(document.querySelector('#windspeed').value);
+
+            //calculations if
+            if (temperature > 50 || windspeed < 3) {
+                calc = "";
+            } else {
+
+                calc = wchill;
+
+            }
+
+            //display calc
+            document.querySelector('#calc').innerHTML = calc;
+        }
+        function windChill(tempF, speed) {
+
+            wchill = 35.74 + (0.6215 * tempF) - (35.75 * Math.pow(speed, 0.16)) + ((0.4275 * tempF) * (Math.pow(speed, 0.16)));
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
