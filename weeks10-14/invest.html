@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest</title>
+</head>
+
+<body>
+    <h1>Invest</h1>
+    <label for="presentvalue">Present Value: <input type="text" id="presentvalue"></label>
+    <label for="numberofperiods">Number of Periods: <input type="text" id="numberofperiods"></label>
+    <label for="rate">Rate: <input type="text" id="rate"></label>
+    </label> <br><br>
+    <button onclick="doFV()">Calculate Future Value</button>
+
+    <div id="calc"></div>
+
+    <script>
+        function doFV() {
+            //declarations
+            let calc = 0;
+
+            //input
+            let presentvalue = parseFloat(document.querySelector('#presentvalue').value);
+            let numberofperiods = parseFloat(document.querySelector('#numberofperiods').value);
+            let rate = parseFloat(document.querySelector('#rate').value);
+
+            //calculation
+            calc = computeFutureValue();
+
+            //display calc
+            document.querySelector('#calc').innerHTML = `${calc.toFixed(2)}`;
+        }
+        function computeFutureValue() {
+            let futurevalue = "";
+            futurevalue = presentvalue * Math.pow((1 + rate), numberofperiods);
+            return futurevalue;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
