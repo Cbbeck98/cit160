@@ -11,7 +11,8 @@
 <body>
     <h1>Invest</h1>
     <label for="presentvalue">Present Value: <input type="text" id="presentvalue"></label>
-    <label for="numberofperiods">Number of Periods: <input type="text" id="numberofperiods"></label>
+    <label for="numberofperiods">Years: <input type="text" id="numberofperiods"></label>
+    <label for="peryear">Periods Per Year: <input type="text" id="peryear"></label>
     <label for="rate">Rate: <input type="text" id="rate"></label>
     </label> <br><br>
     <button onclick="doFV()">Calculate Future Value</button>
@@ -26,17 +27,19 @@
             //input
             let presentvalue = parseFloat(document.querySelector('#presentvalue').value);
             let numberofperiods = parseFloat(document.querySelector('#numberofperiods').value);
+            let peryear = parseFloat(document.querySelector('#peryear').value);
             let rate = parseFloat(document.querySelector('#rate').value);
 
+
             //calculation
-            calc = computeFutureValue(presentvalue, numberofperiods, rate);
+            calc = computeFutureValue(presentvalue, numberofperiods, rate, peryear);
 
             //display calc
             document.querySelector('#calc').innerHTML = `${calc.toFixed(2)}`;
         }
-        function computeFutureValue(presentvalue, numberofperiods, rate) {
+        function computeFutureValue(presentvalue, numberofperiods, rate, peryear) {
             let futurevalue = 0;
-            futurevalue = presentvalue * Math.pow((1 + (rate / 12)), (numberofperiods * 12));
+            futurevalue = presentvalue * Math.pow((1 + (rate / peryear)), (numberofperiods * peryear));
             return futurevalue;
 
         }
