@@ -35,7 +35,7 @@
             document.querySelector('#calc').innerHTML = `${calc.toFixed(2)}`;
         }
         function computeFutureValue() {
-            let futurevalue = "";
+            let futurevalue = 0;
             futurevalue = presentvalue * Math.pow((1 + rate), numberofperiods);
             return futurevalue;
 
