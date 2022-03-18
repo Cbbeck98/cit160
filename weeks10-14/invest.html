@@ -29,14 +29,14 @@
             let rate = parseFloat(document.querySelector('#rate').value);
 
             //calculation
-            calc = computeFutureValue();
+            calc = computeFutureValue(presentvalue, numberofperiods, rate);
 
             //display calc
             document.querySelector('#calc').innerHTML = `${calc.toFixed(2)}`;
         }
-        function computeFutureValue() {
+        function computeFutureValue(presentvalue, numberofperiods, rate) {
             let futurevalue = 0;
-            futurevalue = presentvalue * Math.pow((1 + rate), numberofperiods);
+            futurevalue = presentvalue * Math.pow((1 + (rate / 12)), (numberofperiods * 12));
             return futurevalue;
 
         }
