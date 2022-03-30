@@ -51,12 +51,14 @@
         function multiply(list, multiplier) {
             if (list.length < 6) {
                 let multi = list.map(x => x * 3);
-                return multi;
+                output = [multi];
+                return output;
 
             } else {
 
                 let multi = list.map(x => x * 2);
-                return multi;
+                output = [multi];
+                return output;
             }
         }
 
