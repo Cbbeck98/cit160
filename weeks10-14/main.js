@@ -14,28 +14,27 @@ randomize.addEventListener('click', result);
 
 function result() {
 
-    var newStory = storyText;
-    let xItem = randomValueFromArray(insertX);
-    let yItem = randomValueFromArray(insertY);
-    let zItem = randomValueFromArray(insertZ);
-
     let newStory = storyText;
+    let xItem = randomValueFromArray(insertx);
+    let yItem = randomValueFromArray(inserty);
+    let zItem = randomValueFromArray(insertz);
 
-    let newStory = newStory.replace(':insertx:', xItem);
-    let newStory = newStory.replace(':insertx:', xItem);
-    let newStory = newStory.replace(':inserty:', yItem);
-    let newStory = newStory.replace(':insertz:', zItem);
+    newStory = newStory.replace(":insertx:", xItem);
+    newStory = newStory.replace(":insertx:", xItem);
+    newStory = newStory.replace(":inserty:", yItem);
+    newStory = newStory.replace(":insertz:", zItem);
 
-    if (customName.value !== 'Bob') {
+    if (customName.value !== '') {
         const name = customName.value;
+        newStory = newStory.replace('Bob', name);
 
     }
 
     if (document.getElementById("uk").checked) {
         const weight = Math.round(300 / 14) + " stone";
         const temperature = Math.round((94 - 32) * .5556) + " centigrade";
-        storyText.replace(/94 fahrenheit/g, temperature);
-        storyText.replace(/300 pounds/g, weight);
+        newStory = newStory.replace(/94 fahrenheit/g, temperature);
+        newStory = newStory.replace(/300 pounds/g, weight);
 
     }
 
